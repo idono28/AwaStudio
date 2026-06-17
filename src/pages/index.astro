@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HUD from '../components/HUD.astro';
+import StarField from '../components/StarField.astro';
+import BulletCanvas from '../components/BulletCanvas.astro';
+import PlayerShip from '../components/PlayerShip.astro';
+import PagePanel from '../components/PagePanel.astro';
+import Hero from '../components/Hero.astro';
+
+import '../styles/global.css';
+import '../styles/pages.css';
+---
+
+<BaseLayout>
+  <!-- Layer 0: Stars + scanlines + grid -->
+  <StarField />
+
+  <!-- Layer 1: HUD (fixed top bar + nav) -->
+  <HUD />
+
+  <!-- Layer 2: Page panel (slides from top) -->
+  <PagePanel />
+
+  <!-- Layer 3: Hero text (center) -->
+  <Hero />
+
+  <!-- Layer 4: Player ship (fixed bottom) -->
+  <PlayerShip />
+
+  <!-- Layer 5: Bullet + explosion canvas (on top of everything) -->
+  <BulletCanvas />
+
+  <!-- Game controller script -->
+  <script src="../scripts/game.ts"></script>
+</BaseLayout>
+
+<style is:global>
+  /* Ensure body has no default overflow issues */
+  body {
+    overflow: hidden;
+  }
+</style>
