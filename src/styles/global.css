@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #00ff41;
+  --color-primary-dim: rgba(0, 255, 65, 0.12);
+  --color-primary-glow: rgba(0, 255, 65, 0.6);
+  --color-accent: #ffff00;
+  --color-accent-dim: rgba(255, 255, 0, 0.15);
+  --color-danger: #ff3333;
+  --color-info: #00aaff;
+  --color-bg: #000000;
+  --color-surface: rgba(0, 0, 0, 0.92);
+  --color-border: #00ff41;
+  --color-text-muted: #aaffaa;
+  --color-text-dim: #446644;
+  --font-pixel: 'Press Start 2P', monospace;
+  --grid-size: 20px;
+  --scanline-opacity: 0.12;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-pixel);
+  image-rendering: pixelated;
+  cursor: crosshair;
+  overflow-x: hidden;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: var(--color-primary); }
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: #000;
+}

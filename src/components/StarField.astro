@@ -1,0 +1,95 @@
+---
+---
+
+<canvas id="starCanvas" aria-hidden="true"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<style>
+  #starCanvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .scanlines {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--scanline-opacity)) 2px,
+      rgba(0, 0, 0, var(--scanline-opacity)) 4px
+    );
+  }
+
+  .grid-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(0, 255, 65, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 65, 0.025) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById('starCanvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+
+  interface Star {
+    x: number;
+    y: number;
+    speed: number;
+    size: number;
+    brightness: number;
+  }
+
+  let stars: Star[] = [];
+  let W = 0;
+  let H = 0;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function initStars(count = 150) {
+    stars = Array.from({ length: count }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      speed: 0.15 + Math.random() * 0.9,
+      size: Math.random() < 0.08 ? 2 : 1,
+      brightness: 0.3 + Math.random() * 0.7,
+    }));
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+    for (const s of stars) {
+      s.y += s.speed;
+      if (s.y > H) {
+        s.y = 0;
+        s.x = Math.random() * W;
+      }
+      ctx.fillStyle = `rgba(0,255,65,${s.brightness})`;
+      ctx.fillRect(Math.round(s.x), Math.round(s.y), s.size, s.size);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  resize();
+  initStars();
+  tick();
+
+  window.addEventListener('resize', () => {
+    resize();
+    initStars();
+  });
+</script>
