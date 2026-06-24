@@ -110,13 +110,24 @@ function fireBullet(navEl: HTMLElement, page: string) {
 function init() {
   initShipControl();
 
+  // Close animation duration — matches `.page-panel` transition in PagePanel.astro (0.45s)
+  const PANEL_CLOSE_MS = 460;
+
   // Nav clicks → fire bullet
   document.querySelectorAll<HTMLElement>('.nav-item').forEach((item) => {
     item.addEventListener('click', () => {
       const page = item.dataset.page;
       if (!page) return;
       if (currentPage === page) return; // already open
-      fireBullet(item, page);
+
+      if (currentPage) {
+        // Another panel is open — close it first so the bullet flight is visible,
+        // then fire once the window has slid away.
+        closePanel();
+        setTimeout(() => fireBullet(item, page), PANEL_CLOSE_MS);
+      } else {
+        fireBullet(item, page);
+      }
     });
   });
 
