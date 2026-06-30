@@ -29,7 +29,7 @@ export const pages: Record<string, PageData> = {
             <table class="info-table">
               <tbody>
                 <tr><td class="info-label">NAME</td><td class="info-val">Hiroki</td></tr>
-                <tr><td class="info-label">TYPE</td><td class="info-val">FREELANCE ENG</td></tr>
+                <tr><td class="info-label">TYPE</td><td class="info-val">SOFTWARE DEV</td></tr>
                 <tr><td class="info-label">BASE</td><td class="info-val">徳島 / REMOTE OK</td></tr>
                 <tr><td class="info-label">STATUS</td><td class="info-val status-ok">▶ 案件受付中</td></tr>
               </tbody>
@@ -40,7 +40,7 @@ export const pages: Record<string, PageData> = {
             <h3 class="card-title">SPEC.DAT</h3>
             <p class="card-body">
               Java / TypeScript を軸に、フルスタック開発・
-              AWSクラウドインフラ・モバイル開発を専門とするフリーランスエンジニア。
+              AWSクラウドインフラ・モバイル開発を専門とするソフトウェア開発者。
             </p>
             <p class="card-body" style="margin-top: 12px;">
               Claude Code を活用したマルチエージェント開発パイプラインの設計・実装も手がける。
