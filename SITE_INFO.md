@@ -27,8 +27,7 @@
 |---|---|---|
 | 大見出し（中央の大きな文字） | AWASTUDIO | |
 | 肩書き | FREELANCE ENGINEER | |
-| ステータス LVL | 99 | |
-| ステータス EXP（得意分野） | TypeScript / AWS / React | |
+| EXP（得意分野） | TypeScript / AWS / React | |
 
 ---
 
