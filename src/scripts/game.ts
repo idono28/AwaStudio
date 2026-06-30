@@ -135,7 +135,7 @@ function init() {
   window.addEventListener('bullet-hit', (e: Event) => {
     const { page, navEl } = (e as CustomEvent).detail;
     updateScore(100);
-    setTimeout(() => openPanel(page, navEl), 180);
+    setTimeout(() => openPanel(page, navEl), 100);
   });
 
   // Close panel
