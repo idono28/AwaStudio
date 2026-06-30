@@ -15,7 +15,7 @@
 
 | 項目 | 現在の値 | 記入欄 |
 |---|---|---|
-| サイト名（ブラウザのタブ名） | AwaStudio — Freelance Engineer | |
+| サイト名（ブラウザのタブ名） | AwaStudio — Software Developer | |
 | HUD ロゴ（画面左上） | // AWASTUDIO | |
 | 公開ドメイン | awastudio.jp | |
 
@@ -26,7 +26,7 @@
 | 項目 | 現在の値 | 記入欄 |
 |---|---|---|
 | 大見出し（中央の大きな文字） | AWASTUDIO | |
-| 肩書き | FREELANCE ENGINEER | |
+| 肩書き | SOFTWARE DEVELOPER | |
 | EXP（得意分野） | TypeScript / AWS / React | |
 
 ---
@@ -38,14 +38,14 @@
 | 項目 | 現在の値 | 記入欄 |
 |---|---|---|
 | NAME（名前） | Hiroki | |
-| TYPE（種別） | FREELANCE ENG | |
+| TYPE（種別） | SOFTWARE DEV | |
 | BASE（拠点） | 徳島 / REMOTE OK | |
 | STATUS（状況） | ▶ 案件受付中 | |
 
 ### SPEC.DAT（自己紹介文）
 
 > 現在の値：
-> Java / TypeScript を軸に、フルスタック開発・AWSクラウドインフラ・モバイル開発を専門とするフリーランスエンジニア。
+> Java / TypeScript を軸に、フルスタック開発・AWSクラウドインフラ・モバイル開発を専門とするソフトウェア開発者。
 > Claude Code を活用したマルチエージェント開発パイプラインの設計・実装も手がける。個人事業主として各種プロダクト開発・受託開発に対応。
 
 記入欄：
