@@ -67,39 +67,39 @@ export const pages: Record<string, PageData> = {
         <div class="skills-grid">
           <div class="pixel-card">
             <h3 class="card-title">FRONTEND</h3>
-            <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">TypeScript</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div><span class="skill-pct">95</span></div>
-              <div class="skill-row"><span class="skill-name">React</span><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div><span class="skill-pct">90</span></div>
-              <div class="skill-row"><span class="skill-name">Astro</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div><span class="skill-pct">80</span></div>
-              <div class="skill-row"><span class="skill-name">Electron</span><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div><span class="skill-pct">82</span></div>
-              <div class="skill-row"><span class="skill-name">Flutter</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div><span class="skill-pct">75</span></div>
+            <div class="skill-tags">
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Astro</span>
+              <span class="skill-tag">Electron</span>
+              <span class="skill-tag">Flutter</span>
             </div>
           </div>
 
           <div class="pixel-card">
             <h3 class="card-title">BACKEND</h3>
-            <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">Java / Spring</span><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div><span class="skill-pct">90</span></div>
-              <div class="skill-row"><span class="skill-name">Node.js / Hono</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div><span class="skill-pct">85</span></div>
-              <div class="skill-row"><span class="skill-name">Cloudflare Workers</span><div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div><span class="skill-pct">78</span></div>
+            <div class="skill-tags">
+              <span class="skill-tag">Java / Spring</span>
+              <span class="skill-tag">Node.js / Hono</span>
+              <span class="skill-tag">Cloudflare Workers</span>
             </div>
           </div>
 
           <div class="pixel-card">
             <h3 class="card-title">CLOUD / INFRA</h3>
-            <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">AWS Lambda</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div><span class="skill-pct">88</span></div>
-              <div class="skill-row"><span class="skill-name">AWS Amplify</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div><span class="skill-pct">85</span></div>
-              <div class="skill-row"><span class="skill-name">Route 53 / SES</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div><span class="skill-pct">80</span></div>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS Lambda</span>
+              <span class="skill-tag">AWS Amplify</span>
+              <span class="skill-tag">Route 53 / SES</span>
             </div>
           </div>
 
           <div class="pixel-card">
             <h3 class="card-title">AI / TOOLS</h3>
-            <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">Claude Code</span><div class="skill-bar"><div class="skill-fill accent-fill" style="width:92%"></div></div><span class="skill-pct">92</span></div>
-              <div class="skill-row"><span class="skill-name">Multi-Agent Dev</span><div class="skill-bar"><div class="skill-fill accent-fill" style="width:85%"></div></div><span class="skill-pct">85</span></div>
-              <div class="skill-row"><span class="skill-name">MCP Integration</span><div class="skill-bar"><div class="skill-fill accent-fill" style="width:80%"></div></div><span class="skill-pct">80</span></div>
+            <div class="skill-tags">
+              <span class="skill-tag accent">Claude Code</span>
+              <span class="skill-tag accent">Multi-Agent Dev</span>
+              <span class="skill-tag accent">MCP Integration</span>
             </div>
           </div>
         </div>

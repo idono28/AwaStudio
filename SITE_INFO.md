@@ -71,41 +71,40 @@
 
 ## 4. SKILLS（スキル）
 
-カテゴリ名・スキル名・習熟度（0〜100の数値、棒グラフの長さになります）を記入してください。
+各カテゴリに、使える技術を **タグ（一覧）** で表示します。習熟度の数値・バーは廃止しました。
+カテゴリ名と、並べる技術名を記入してください（追加・削除・並べ替え自由）。
 
 ### FRONTEND
+現在の値：TypeScript / React / Astro / Electron / Flutter
 
-| スキル名 | 現在の値 | 記入欄（名前 / 数値） |
-|---|---|---|
-| TypeScript | 95 | |
-| React | 90 | |
-| Astro | 80 | |
-| Electron | 82 | |
-| Flutter | 75 | |
+記入欄：
+```
+
+```
 
 ### BACKEND
+現在の値：Java / Spring・Node.js / Hono・Cloudflare Workers
 
-| スキル名 | 現在の値 | 記入欄（名前 / 数値） |
-|---|---|---|
-| Java / Spring | 90 | |
-| Node.js / Hono | 85 | |
-| Cloudflare Workers | 78 | |
+記入欄：
+```
+
+```
 
 ### CLOUD / INFRA
+現在の値：AWS Lambda / AWS Amplify / Route 53 / SES
 
-| スキル名 | 現在の値 | 記入欄（名前 / 数値） |
-|---|---|---|
-| AWS Lambda | 88 | |
-| AWS Amplify | 85 | |
-| Route 53 / SES | 80 | |
+記入欄：
+```
 
-### AI / TOOLS
+```
 
-| スキル名 | 現在の値 | 記入欄（名前 / 数値） |
-|---|---|---|
-| Claude Code | 92 | |
-| Multi-Agent Dev | 85 | |
-| MCP Integration | 80 | |
+### AI / TOOLS（このカテゴリだけ黄色で強調表示）
+現在の値：Claude Code / Multi-Agent Dev / MCP Integration
+
+記入欄：
+```
+
+```
 
 ---
 
