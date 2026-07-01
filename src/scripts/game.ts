@@ -116,6 +116,7 @@ function init() {
   // Nav clicks → fire bullet
   document.querySelectorAll<HTMLElement>('.nav-item').forEach((item) => {
     item.addEventListener('click', () => {
+      if (item.dataset.locked === 'true') return; // locked / coming soon
       const page = item.dataset.page;
       if (!page) return;
       if (currentPage === page) return; // already open
