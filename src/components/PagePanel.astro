@@ -34,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     padding: 20px 40px 14px;
     border-bottom: 1px solid var(--color-primary);
     position: sticky;
@@ -47,18 +48,39 @@
     color: var(--color-primary);
     text-shadow: 0 0 10px var(--color-primary-glow);
     letter-spacing: 1px;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .close-btn {
     font-family: var(--font-pixel);
-    font-size: 7px;
+    font-size: 10px;
     color: var(--color-danger);
     background: transparent;
     border: 1px solid var(--color-danger);
-    padding: 6px 12px;
+    padding: 8px 12px;
     cursor: crosshair;
     transition: background 0.1s, color 0.1s;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 700px) {
+    .panel-header {
+      padding: 16px 18px 12px;
+    }
+
+    .panel-title {
+      font-size: 14px;
+    }
+
+    .close-btn {
+      font-size: 9px;
+      padding: 7px 10px;
+    }
   }
 
   .close-btn:hover {
