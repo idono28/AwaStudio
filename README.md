@@ -48,7 +48,8 @@ public/
 .github/
 └── workflows/
     └── deploy.yml           # GitHub Pages 自動デプロイ
-SITE_INFO.md                 # サイト掲載情報の入力シート
+docs/
+└── SITE_INFO.md             # サイト掲載情報の入力シート
 ```
 
 ## セットアップ
@@ -64,7 +65,7 @@ npm run preview   # ビルドプレビュー
 
 ### コンテンツの編集
 `src/data/pages.ts` を編集してください。各ページの `title` と `content` (HTML文字列) を変更できます。
-掲載情報をまとめて見直す場合は `SITE_INFO.md` の入力シートを利用できます。
+掲載情報をまとめて見直す場合は `docs/SITE_INFO.md` の入力シートを利用できます。
 
 ### カラーテーマ
 `src/styles/global.css` の `:root` セクションにある CSS 変数を変更します：
