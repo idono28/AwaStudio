@@ -34,6 +34,33 @@
 
 @media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; }
+
+  /* Stack label above value instead of squeezing them side by side,
+     which was forcing values like "SOFTWARE DEV" to wrap mid-word. */
+  .info-table,
+  .info-table tbody,
+  .info-table tr,
+  .info-table td {
+    display: block;
+    width: auto;
+  }
+
+  .info-table tr {
+    margin-bottom: 12px;
+  }
+
+  .info-table tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-table tr + tr td {
+    padding-top: 0;
+  }
+
+  .info-label {
+    padding-right: 0;
+    margin-bottom: 4px;
+  }
 }
 
 .profile-avatar {

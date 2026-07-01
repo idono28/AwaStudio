@@ -223,7 +223,7 @@ export const pages: Record<string, PageData> = {
             <ul class="status-list">
               <li class="status-item ok">▶ 新規案件受付中</li>
               <li class="status-item ok">▶ フルリモート対応</li>
-              <li class="status-item ok">▶ 返信: 24時間以内</li>
+              <li class="status-item ok">▶ 返信：24時間以内</li>
               <li class="status-item warn">▲ 長期・スポット両対応</li>
             </ul>
           </div>
