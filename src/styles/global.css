@@ -22,6 +22,9 @@
   --font-pixel: 'Press Start 2P', monospace;
   --grid-size: 20px;
   --scanline-opacity: 0.12;
+  /* Kept in sync with the HUD's actual rendered height via ResizeObserver in game.ts,
+     so layout works whether the HUD is one row (desktop) or wraps to two (mobile). */
+  --hud-height: 52px;
 }
 
 html, body {

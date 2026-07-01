@@ -14,7 +14,7 @@
 <style>
   .page-panel {
     position: fixed;
-    top: 52px; /* HUD height */
+    top: var(--hud-height, 52px);
     left: 0;
     right: 0;
     z-index: 190;
@@ -22,7 +22,7 @@
     border-bottom: 3px solid var(--color-primary);
     transform: translateY(-110%);
     transition: transform 0.45s steps(9);
-    max-height: calc(100vh - 52px);
+    max-height: calc(100vh - var(--hud-height, 52px));
     overflow-y: auto;
   }
 

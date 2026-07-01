@@ -26,6 +26,25 @@ function getNavTargetCenter(el: HTMLElement): { x: number; y: number } {
   };
 }
 
+// Keep --hud-height in sync with the HUD's real rendered height so the page
+// panel's top offset stays correct whether the HUD nav is one row (desktop)
+// or wraps to two rows (narrow / mobile screens).
+function initHudHeightSync() {
+  const hud = document.getElementById('hudBar');
+  if (!hud) return;
+
+  const sync = () => {
+    document.documentElement.style.setProperty('--hud-height', `${hud.offsetHeight}px`);
+  };
+  sync();
+
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(sync).observe(hud);
+  } else {
+    window.addEventListener('resize', sync);
+  }
+}
+
 // Ship follows mouse
 function initShipControl() {
   const wrapper = document.getElementById('shipWrapper') as HTMLElement;
@@ -37,6 +56,16 @@ function initShipControl() {
   document.addEventListener('mousemove', (e) => {
     targetX = e.clientX;
   });
+
+  // Touch devices have no mousemove — let the ship follow the finger too.
+  document.addEventListener(
+    'touchmove',
+    (e) => {
+      const touch = e.touches[0];
+      if (touch) targetX = touch.clientX;
+    },
+    { passive: true }
+  );
 
   function lerp(a: number, b: number, t: number) {
     return a + (b - a) * t;
@@ -108,6 +137,7 @@ function fireBullet(navEl: HTMLElement, page: string) {
 
 // Wiring
 function init() {
+  initHudHeightSync();
   initShipControl();
 
   // Close animation duration — matches `.page-panel` transition in PagePanel.astro (0.45s)
