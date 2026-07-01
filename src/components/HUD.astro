@@ -2,12 +2,13 @@
 interface NavItem {
   label: string;
   page: string;
+  locked?: boolean;
 }
 
 const navItems: NavItem[] = [
   { label: '[ ABOUT ]', page: 'about' },
   { label: '[ SKILLS ]', page: 'skills' },
-  { label: '[ WORKS ]', page: 'works' },
+  { label: '[ WORKS ]', page: 'works', locked: true },
   { label: '[ CONTACT ]', page: 'contact' },
 ];
 ---
@@ -20,11 +21,16 @@ const navItems: NavItem[] = [
       {navItems.map((item) => (
         <li>
           <button
-            class="nav-item"
+            class={item.locked ? 'nav-item locked' : 'nav-item'}
             data-page={item.page}
-            aria-label={`${item.page}ページを開く`}
+            data-locked={item.locked ? 'true' : undefined}
+            disabled={item.locked}
+            aria-disabled={item.locked ? 'true' : undefined}
+            aria-label={item.locked ? `${item.page}（準備中）` : `${item.page}ページを開く`}
+            title={item.locked ? 'COMING SOON / 準備中' : undefined}
           >
             {item.label}
+            {item.locked && <span class="nav-lock">SOON</span>}
           </button>
         </li>
       ))}
@@ -82,7 +88,7 @@ const navItems: NavItem[] = [
     letter-spacing: 0.5px;
   }
 
-  .nav-item:hover {
+  .nav-item:not(.locked):hover {
     border-color: var(--color-primary);
     background: var(--color-primary-dim);
     color: #fff;
@@ -99,6 +105,23 @@ const navItems: NavItem[] = [
   .nav-item:focus-visible {
     outline: 1px solid var(--color-primary);
     outline-offset: 2px;
+  }
+
+  /* Locked / coming-soon nav item */
+  .nav-item.locked {
+    color: var(--color-text-dim);
+    opacity: 0.55;
+    cursor: not-allowed;
+    border-color: transparent;
+  }
+
+  .nav-lock {
+    font-size: 7px;
+    color: var(--color-accent);
+    opacity: 0.85;
+    margin-left: 6px;
+    vertical-align: super;
+    letter-spacing: 0.5px;
   }
 
   .hud-right {
